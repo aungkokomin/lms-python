@@ -1,7 +1,7 @@
 from django.db import models
 
 class Module(models.Model):
-    course_id = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='modules')
+    course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='modules')
     title = models.CharField(max_length=100)
     description = models.TextField( blank=True, null=True)
     sorting_order = models.PositiveIntegerField()

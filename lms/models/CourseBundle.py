@@ -1,8 +1,8 @@
 from django.db import models
 
 class CourseBundle(models.Model):
-    course_id = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='course_bundles')
-    bundle_id = models.ForeignKey('Bundle', on_delete=models.CASCADE, related_name='course_bundles')
+    course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='course_bundles')
+    bundle = models.ForeignKey('Bundle', on_delete=models.CASCADE, related_name='course_bundles')
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     # price = models.DecimalField(max_digits=10, decimal_places=2)
