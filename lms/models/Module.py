@@ -7,7 +7,7 @@ class Module(models.Model):
     sorting_order = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    deleted_at = models.DateTimeField(null=True, blank=True)
+    # deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.title

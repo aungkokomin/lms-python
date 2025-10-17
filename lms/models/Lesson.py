@@ -8,7 +8,7 @@ class Lesson(models.Model):
     sorting_order = models.PositiveIntegerField(default=1, help_text="Determines the order of lessons within a module")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    deleted_at = models.DateTimeField(null=True, blank=True)
+    # deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.title
